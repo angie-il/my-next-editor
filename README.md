@@ -1,8 +1,16 @@
-# Create T3 App
-
 # MY NEXT EDITOR
 
-A simple web-based drawing editor built with Tldraw (https://tldraw.dev), powered by Next.js, TailwindCSS, Shadcn UI, and tRPC. Users can create and modify shapes on a canvas, and all changes are automatically saved via API using snapshot syncing. Built as a technical test to demonstrate frontend architecture, performance optimization, and type-safe fullstack development.
+A simple web-based drawing editor built with Tldraw (https://tldraw.dev), powered by Next.js, TailwindCSS, Shadcn UI, and tRPC. Users can create and modify shapes on a canvas, and all changes are automatically saved via API using snapshot syncing.
+
+###  Stack
+- T3 Stack
+  - Next.js (App Router)
+  - TailwindCSS
+  - tRPC
+  - TypeScript
+-  Tldraw
+- 🎨 Shadcn UI
+
 
 ### 🗓️ Day 1
 
@@ -18,11 +26,7 @@ A simple web-based drawing editor built with Tldraw (https://tldraw.dev), powere
   }
   ```
 
-- Bootstrapped the project using the **T3 Stack** for a clean setup with:
-  - Next.js (App Router)
-  - TailwindCSS
-  - tRPC
-  - TypeScript
+- Bootstrapped the project using the **T3 Stack**
 - Removed Prisma and NextAuth since they weren’t needed
 - Installed and configured Shadcn UI using npx shadcn@latest init
 - Cleaned out boilerplate example files from T3 Stack
@@ -31,15 +35,13 @@ A simple web-based drawing editor built with Tldraw (https://tldraw.dev), powere
 ### 🗓️ Day 2
 
 - Created and configured the EditorPage using the Tldraw component
-- Changed the button to update the shape from the Tldraw documentation
-- Connected the UI to the Tldraw canvas (positioned button with TailwindCSS)
+- Added the button to modify the shape of the Tldraw canvas
 - Implemented the getDocument API endpoint with tRPC to retrieve the stored snapshot
 
 ### 🗓️ Day 3
 
 - Implemented error and loading state handling for the EditorPage using isLoading and isError
 - Added conditional rendering to show a loading screen or error message when the API request is pending or fails
-- Ensured user feedback during snapshot retrieval with friendly UI messages
 
 ### 🗓️ Day 4
 
@@ -48,3 +50,75 @@ A simple web-based drawing editor built with Tldraw (https://tldraw.dev), powere
 - Implemented hashing (via JSON.stringify) to prevent unnecessary mutations when no real changes occurred
 - Ensured shapes reappear on page refresh via snapshot loading from API or localStorage
 - Finalized basic structure and ensured everything works with a clear setup
+
+### 🗓️ Day 5
+
+- ✅ NEW Added "Clear All" button
+
+  - Allows users to instantly remove all shapes from the canvas
+  - Helpful for resetting the board before starting a new drawing
+ 
+### 🚀 Setup Instructions
+
+1. Clone the repo
+```
+git clone https://github.com/your-username/my-next-editor.git
+cd my-next-editor
+```
+
+2. Install dependencies
+```
+npm install
+```
+
+3. Run the app locally
+```
+npm run dev
+```
+
+Visit http://localhost:3000/ and start drawing!
+
+### How to Test API Calls
+  This project uses tRPC (no REST endpoints). Here's how to see the API in action:
+  - Snapshot saving happens automatically when the editor updates.
+  - API requests can be logged in the terminal (look for console logs like Saving snapshot to memory store).
+
+* Example
+  ```
+  [TRPC] document.updateDocument took 400ms to execute
+   POST /api/trpc/document.updateDocument?batch=1 200 in 426ms
+  Saving snapshot to memory store: {
+    document: {
+      store: {
+        'page:page': [Object],
+        'document:document': [Object],
+        'shape:8e-vYcznmDCysGJKTUBBm': [Object]
+      },
+      schema: { schemaVersion: 2, sequences: [Object] }
+    },
+    session: {
+      version: 0,
+      currentPageId: 'page:page',
+      exportBackground: true,
+      isFocusMode: false,
+      isDebugMode: false,
+      isToolLocked: false,
+      isGridMode: false,
+      pageStates: [ [Object] ]
+    }
+  }
+
+
+### 📚 Resosurces Used
+This project was built using knowledge and examples from the following sources:
+
+- Tldraw Documentation
+- Shadcn UI Documentation
+- TailwindCSS Documentation
+- tRPC Documentation
+- Next.js Documentation
+- Stack Overflow
+- MDN Web Docs
+- W3Schools
+- MiduDev courses
+- ChatGPT for testing, debugging and generating examples.
