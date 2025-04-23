@@ -10,7 +10,8 @@ export const documentRouter = createTRPCRouter({
   }),
 
   updateDocument: publicProcedure.input(z.any()).mutation(({ input }) => {
-    // console.log("Saving snapshot to memory store:", input);
+    // Console log stays to show message in console.
+    console.log("Saving snapshot to memory store:", input);
     storedSnapshot = input as TLEditorSnapshot;
     return { success: true };
   }),
