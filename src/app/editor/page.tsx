@@ -30,14 +30,14 @@ const EditorPage = () => {
 
         if (savedData && Object.keys(savedData).length > 0) {
             loadSnapshot(editor.store, savedData);
-            console.log("Loaded snapshot from API");
+            // console.log("Loaded snapshot from API");
         } else {
             const local = localStorage.getItem("snapshot");
             if (local) {
                 try {
                     const parsed = JSON.parse(local) as TLEditorSnapshot;
                     loadSnapshot(editor.store, parsed);
-                    console.log("Loaded snapshot from localStorage");
+                    // console.log("Loaded snapshot from localStorage");
                 } catch (err) {
                     console.error("Failed to load snapshot", err);
                 }
@@ -75,7 +75,7 @@ const EditorPage = () => {
 
         localStorage.setItem("snapshot", JSON.stringify(debouncedSnapshot));
         updateSnapshot.mutate(debouncedSnapshot);
-        console.log("Snapshot saved (debounced)");
+        // console.log("Snapshot saved (debounced)");
     }, [debouncedSnapshot, updateSnapshot]);
 
     if (isLoading) {
@@ -108,7 +108,7 @@ const EditorPage = () => {
 
             <div className="flex-1 relative">
                 <Tldraw onMount={handleMount}>
-                    <div className="absolute left-1/3 -translate-x-1/2 z-50">
+                    <div className="absolute left-1/2 top-1 -translate-x-1/2 z-50 flex gap-2">
                         <ModifyButton />
                         <ClearAllButton />
                     </div>

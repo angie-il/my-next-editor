@@ -9,7 +9,7 @@ const ModifyButton = () => {
 
     const handleClick = () => {
         const snapshot = getSnapshot(editor.store);
-        console.log("Snapshot at click: ", snapshot);
+        // console.log("Snapshot at click: ", snapshot);
         const shapes = editor.getCurrentPageShapes();
         if (shapes.length === 0) return;
 

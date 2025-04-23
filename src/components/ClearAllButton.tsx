@@ -17,7 +17,7 @@ const ClearAllButton = () => {
         <Button
             onClick={handleClear}
             variant="destructive"
-            className="ml-2 cursor pointer"
+            className="ml-2 cursor-pointer"
         >
             Delete All
         </Button>
