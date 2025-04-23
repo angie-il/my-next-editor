@@ -57,6 +57,7 @@ A simple web-based drawing editor built with Tldraw (https://tldraw.dev), powere
 
   - Allows users to instantly remove all shapes from the canvas
   - Helpful for resetting the board before starting a new drawing
+  - Deployed in Vercel https://my-next-editor.vercel.app/
  
 ### 🚀 Setup Instructions
 
