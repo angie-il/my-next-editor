@@ -1,14 +1,25 @@
+import Link from "next/link";
+
 const HomePage = () => {
     return (
-        <main className="p-6">
-            <h1 className="text-xl font-bold mb-4">Welcome to My Next Editor</h1>
-            <p className="mb-4">Click below to start editing:</p>
-            <a
+        <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-6 py-12 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Welcome to My Next Editor 📝
+            </h1>
+
+            <p className="text-lg text-gray-600 max-w-xl mb-8">
+                A simple drawing app built with <span className="font-semibold">Tldraw</span>,
+                <span className="font-semibold"> tRPC</span>, <span className="font-semibold">TailwindCSS</span> &
+                <span className="font-semibold"> Shadcn UI</span>.
+                Draw, save, and modify shapes like a boss 💪.
+            </p>
+
+            <Link
                 href="/editor"
-                className="text-blue-500 underline hover:text-blue-700 transition"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg shadow transition"
             >
-                Go to Editor
-            </a>
+                Open Editor
+            </Link>
         </main>
     );
 };
