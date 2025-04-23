@@ -106,9 +106,10 @@ const EditorPage = () => {
                 </h1>
             </div>
 
-            <div className="flex-1 relative">
+            <div className="flex-1 flex items-center justify-center relativemin-h-0">
                 <Tldraw onMount={handleMount}>
-                    <div className="absolute left-1/2 top-1 -translate-x-1/2 z-50 flex gap-2">
+                    <div className="absolute z-50 flex gap-2 items-center sm:top-4 sm:left-1/2 sm:-translate-x-1/2
+             top-16 left-0 translate-x-0 px-4 flex-nowrap overflow-x-auto">
                         <ModifyButton />
                         <ClearAllButton />
                     </div>
