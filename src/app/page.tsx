@@ -7,12 +7,17 @@ const HomePage = () => {
                 Welcome to My Next Editor 📝
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-xl mb-8">
-                A simple drawing app built with <span className="font-semibold">Tldraw</span>,
-                <span className="font-semibold"> tRPC</span>, <span className="font-semibold">TailwindCSS</span> &
-                <span className="font-semibold"> Shadcn UI</span>.
-                Draw, save, and modify shapes like a boss 💪.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 px-4 text-center">
+                <span className="font-semibold">My Next Editor</span> a simple drawing app built with the
+                <span className="font-semibold"> T3 Stack</span> – featuring
+                <span className="font-semibold"> Tldraw</span> for canvas magic,
+                <span className="font-semibold"> tRPC</span> for type-safe API communication,
+                <span className="font-semibold"> TailwindCSS</span> for styling, and
+                <span className="font-semibold"> Shadcn UI</span> for modern components.
+                <br /><br />
+                You can draw, save, and modify shapes in real-time, as well as delete them all 🔥 for a clean interface.
             </p>
+
 
             <Link
                 href="/editor"
