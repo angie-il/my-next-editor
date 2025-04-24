@@ -64,7 +64,7 @@ A simple web-based drawing editor built with Tldraw (https://tldraw.dev), powere
 
 1. Clone the repo
 ```
-git clone https://github.com/your-username/my-next-editor.git
+git clone https://github.com/angie-il/my-next-editor.git
 cd my-next-editor
 ```
 
@@ -81,9 +81,9 @@ npm run dev
 Visit http://localhost:3000/ and start drawing!
 
 ### How to Test API Calls
-  This project uses tRPC (no REST endpoints). Here's how to see the API in action:
+  This project uses tRPC. Here's how to see the API in action:
   - Snapshot saving happens automatically when the editor updates.
-  - API requests can be logged in the terminal (look for console logs like Saving snapshot to memory store).
+  - API requests can be logged in the terminal (look for console logs like "Saving snapshot to memory store").
 
 * Example
   ```
